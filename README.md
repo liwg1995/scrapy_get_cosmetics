@@ -9,3 +9,5 @@
   - 商品价格
   - 商品图片对应的图片名
 > 各个参数直接用`@`分割开，每个商品之间用`####`分隔开，便于对文件的处理
+### 爬取[http://cosmetic.lady.163.com/search/product/](http://cosmetic.lady.163.com/search/product/)上的各个品牌的商品
+- 同上，只是图片有所减少，因为排除了一些默认图片的商品

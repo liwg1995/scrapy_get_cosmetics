@@ -15,3 +15,12 @@ class OnlyLadyItem(scrapy.Item):
     brand = scrapy.Field()
     price = scrapy.Field()
     image_url = scrapy.Field()
+
+
+class WyladyItem(scrapy.Item):
+    brand = scrapy.Field()
+    name = scrapy.Field()
+    type = scrapy.Field()
+    detail = scrapy.Field()
+    price = scrapy.Field()
+    good_image_url = scrapy.Field()

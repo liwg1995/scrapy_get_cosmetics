@@ -10,6 +10,8 @@ from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 from onlylady.settings import UserAgentList
 import random
 
+from fake_useragent import UserAgent
+
 
 class OnlyladySpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -66,3 +68,12 @@ class MyUserAgentMiddleware(UserAgentMiddleware):
     def process_request(self, request, spider):
         agent = random.choice(list(UserAgentList))
         request.headers['User-Agent'] = agent
+
+class FakeUseragentMiddle(UserAgentMiddleware):
+
+    def __init__(self,user_agent=''):
+        self.user_agent = user_agent
+
+    def process_request(self, request, spider):
+        ua = UserAgent()
+        request.headers['User-Agent'] = ua.random

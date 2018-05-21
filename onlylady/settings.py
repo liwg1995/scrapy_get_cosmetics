@@ -54,6 +54,7 @@ ROBOTSTXT_OBEY = True
 DOWNLOADER_MIDDLEWARES = {
    # 'onlylady.middlewares.MyUserAgentMiddleware': 543,
    'onlylady.middlewares.FakeUseragentMiddle': 543,
+   'onlylady.middlewares.ProxyIpMiddleware' : 543,
 }
 
 # Enable or disable extensions

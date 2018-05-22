@@ -13,6 +13,8 @@ import random
 from fake_useragent import UserAgent
 
 
+from onlylady.tools import proxy
+
 class OnlyladySpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
@@ -79,20 +81,21 @@ class FakeUseragentMiddle(UserAgentMiddleware):
         request.headers['User-Agent'] = ua.random
 
 class ProxyIpMiddleware(object):
-    proxy_list = [
-        "http://180.76.154.5:8888",
-        "http://14.109.107.1:8998",
-        "http://106.46.136.159:808",
-        "http://175.155.24.107:808",
-        "http://124.88.67.10:80",
-        "http://124.88.67.14:80",
-        "http://58.23.122.79:8118",
-        "http://123.157.146.116:8123",
-        "http://124.88.67.21:843",
-        "http://106.46.136.226:808",
-        "http://101.81.120.58:8118",
-        "http://180.175.145.148:808"
-    ]
+    # proxy_list = [
+    #     "http://180.76.154.5:8888",
+    #     "http://14.109.107.1:8998",
+    #     "http://106.46.136.159:808",
+    #     "http://175.155.24.107:808",
+    #     "http://124.88.67.10:80",
+    #     "http://124.88.67.14:80",
+    #     "http://58.23.122.79:8118",
+    #     "http://123.157.146.116:8123",
+    #     "http://124.88.67.21:843",
+    #     "http://106.46.136.226:808",
+    #     "http://101.81.120.58:8118",
+    #     "http://180.175.145.148:808"
+    # ]
+    proxy_list = proxy.get_ip()
 
     def process_request(self,request,spider):
         ip = random.choice(self.proxy_list)

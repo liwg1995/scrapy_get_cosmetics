@@ -1,0 +1,7 @@
+.idea/
+*.pyc
+*.txt
+onlylady/__pycache__/
+onlylady/Wylady/
+onlylady/onlylady/
+.DS_Store

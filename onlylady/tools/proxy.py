@@ -69,4 +69,4 @@ class Get_ips():
 def get_ip():
     my = Get_ips(4)
     return my.main()
-get_ip()
+# get_ip()

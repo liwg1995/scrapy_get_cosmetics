@@ -12,3 +12,5 @@
 
 ### 爬取[http://cosmetic.lady.163.com/search/product/](http://cosmetic.lady.163.com/search/product/)上的各个品牌的商品
 - 同上，只是图片有所减少，因为排除了一些默认图片的商品
+
+### 中间件`middlewares`有代理ip、有随机useragent

@@ -80,6 +80,7 @@ class FakeUseragentMiddle(UserAgentMiddleware):
         ua = UserAgent()
         request.headers['User-Agent'] = ua.random
 
+'''
 class ProxyIpMiddleware(object):
     # proxy_list = [
     #     "http://180.76.154.5:8888",
@@ -101,3 +102,4 @@ class ProxyIpMiddleware(object):
         ip = random.choice(self.proxy_list)
         print(ip)
         request.meta['proxy'] = ip
+'''
